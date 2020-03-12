@@ -1,0 +1,112 @@
+body {
+	background-color: #010101;
+    background-image: url(/img/site_img/fon_concert.jpg);
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-attachment: fixed;
+    background-size: 100%;
+    color: #333;
+    font-size: 16px;
+}
+
+
+
+.site-branding-area {
+	background-color: rgba(1,1,1,0.8);
+    background-image: url(/img/site_img/noty.png);
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    background-size: auto 100%;
+}
+
+.dropdown-menu {
+	background-color: #251F10;
+	box-shadow: 0 6px 12px rgba(255,255,255,.175);
+}
+.dropdown-menu>li>a {
+	color: rgba(255, 255, 255, .7);
+}
+
+.main-page-slider {
+	background-color: #ffffff;
+	padding-bottom: 10px;
+}
+
+.text-area {
+    border: 10px solid rgba(227, 30, 36, .1);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px 1.5%;
+    margin-bottom: 20px;
+}
+.text-area h1 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    color: #444;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: dashed 1px #E31E24;
+    font-size: 36px;
+}
+.text-area h2 {
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 24px;
+    font-style: italic;
+    color: #E31E24;
+}
+.text-area h2 a {
+    color: #E31E24;
+}
+.color-text {
+    color: #E31E24;
+}
+
+.new-products {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+.new-products:last-child {
+    margin-bottom: 0;
+}
+.new-products .single-product {
+    flex: 0 0 18.8%;
+    margin-right: 1.5%;
+    margin-bottom: 15px;
+    border: none;
+    box-shadow: 1px 1px 10px 0px rgba(227, 30, 36, .5);
+    border-radius: 3px;
+}
+.new-products .single-product:nth-child(5n) {
+    margin-right: 0;
+}
+.new-products .single-product .single-product-img {
+    padding: 20px;
+    margin: 0 auto;
+    min-height: 205px;
+}
+.new-products .single-product img {
+    display: block;
+    width: 100%;
+    border: solid 1px #E31E24;
+    padding: 2px;
+}
+.new-products .single-product p {
+    margin-bottom: 0;
+}
+.new-products .product-name {
+    padding: 5px;
+    text-align: center;
+    line-height: 1.1;
+    font-size: 14px;
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+}
+.new-products .product-name a {
+    color: #333;
+}
+.new-products .product-price {
+    padding: 5px;
+    text-align: center;
+    font-size: 16px;
+    color: #E31E24;
+}

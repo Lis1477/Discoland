@@ -1,0 +1,50 @@
+@charset "windows-1251";
+/* Сброс стилей браузеров */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after,
+q:before, q:after {content: '';content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+/* Конец сброса стилей браузеров */
+/* ************************************************* */
+
+body {display:table; width:95%; padding:10px; margin:0; font-family: Verdana, Geneva, sans-serif; color:#666666;}
+
+h1 {font-size: 1.8em; margin-bottom:20px;}
+h2 {font-size: 1.5em; margin-bottom:20px;}
+h3 {font-size: 1.2em; margin-bottom:20px;}
+a {font-weight:bold; text-decoration:none; color:inherit;}
+a:hover {text-decoration:underline;}
+p {margin-bottom:10px;}
+p:last-child {margin-bottom:0;}
+table {margin-bottom:10px;}
+table td {border:solid 1px #999999; padding:5px; vertical-align:middle;}
+table th {border:solid 1px #999999; padding:5px; vertical-align:middle; font-weight:bold;}
+button:hover {cursor:pointer;}
+strong {font-weight:bold;}
+
+
+.admin-menu {display:table-cell; border-right:solid 3px #666666; width:200px;}
+
+.admin-content {display:table-cell; padding:5px 10px;}
+.red {color:red;}
+.button {padding:3px 7px; background-color: rgba(153,255,153,0.5); border-radius:7px; font-size:75%;}
+.button:hover {background-color:rgba(153,255,153,1); text-decoration:none;}
+.view_mailing {border:solid 1px #999999; background-color:rgba(252,235,209,0.3); padding:10px; margin-bottom:20px;}
