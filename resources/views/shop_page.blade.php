@@ -1,26 +1,8 @@
 @extends('layouts.base')
 
 @section('content')
-    <section>
-        <div class="container">
-            <div class="text-area">
-                <nav>
-                        @foreach ($cat as $one)
-                            <li class="dropdown-item">
-                                <a href="{{ asset('magazin/'.$one->slug) }}">{{ $one->name }}</a>
-                                @foreach($one->categories()->orderBy('order')->get() as $two)
-                                    <li class="dropdown-item">
-                                        <a class="sub-item" href="{{ asset('magazin/'.$two->slug) }}"> - {{ $two->name }}</a>
-                                    </li>
-                                @endforeach
-                            </li>
-                        @endforeach
-                    
-                </nav>
-            </div>
-        </div>
-    </section>
 
+    @include ('includes.product_menu')
 
     <article>
     	<div class="container">

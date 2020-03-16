@@ -68,7 +68,7 @@
                 <div class="col-sm-6">
                     <div class="logo">
                         <a href="{{ asset('/') }}">
-                            <img src="img/site_img/logo_discoland.png">
+                            <img src="{{ asset('img/site_img/logo_discoland.png') }}">
                         </a>
                     </div>
                 </div>
@@ -97,7 +97,7 @@
                     <nav>
                         <ul class="nav navbar-nav">
                             <li class="active"><a href="{{ asset('') }}">Главная</a></li>
-                            <li><a href="{{ asset('magazin') }}">Магазин</a></li>
+                            <li><a href="{{ asset('katalog') }}">Каталог</a></li>
                             <li><a href="#">Доставка и оплата</a></li>
                             <li><a href="#">Блог</a></li>
                             <li><a href="#">Контакты</a></li>

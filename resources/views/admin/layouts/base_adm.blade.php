@@ -13,8 +13,16 @@
 <body>
 
 	<div class="admin-menu">
+
+		<p class="logout_link">
+			<a href="{{ asset('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Выйти</a>
+		</p>
+		<form id="logout-form" action="{{ asset('logout') }}" method="POST" style="display: none;">
+			{!!csrf_field()!!}
+		</form>
+
 		<h2>Меню:</h2>
-		<p><a href="#">Адреса</a></p>
+		<p><a href="{{ asset('adm/users') }}">Подписчики</a></p>
 		<p><a href="#">Рассылки</a></p>
 		<p><a href="#">Каталоги</a></p>
 		<br>

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models;
+namespace App;
 
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
@@ -44,7 +44,6 @@ class User extends Authenticatable
     public function hasAnyRoles($roles){
         return null !== $this->roles()->whereIn('name', $roles)->first();
     }
-
     public function hasAnyRole($role){
         return null !== $this->roles()->where('name', $role)->first();
     }
