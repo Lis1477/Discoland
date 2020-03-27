@@ -14,15 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-//Route::get('katalog', 'ShopPageController@getIndex');
+Route::prefix('korzina-tovarov')->group(function(){
+	Route::get('/', 'CartController@getIndex');
+	Route::get('/delete/{id}', 'CartController@getDelete');
+	Route::post('/edit/{id}', 'CartController@postEdit');
+});
+
+//Route::get('korzina-tovarov', 'CartController@getIndex');
 
 Route::prefix('katalog')->group(function(){
 	Route::get('/', 'ShopPageController@getIndex');
 	Route::get('/{cat_slug}', 'ProductPageController@getIndex');
+	Route::get('/{cat_slug}/{product_slug}', 'ProductItemController@getIndex');
 });
-
-
-
 
 Route::get('', 'MainPageController@getIndex');
 

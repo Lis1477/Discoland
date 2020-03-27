@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="{{ $description }}">
+    <meta name="description" content="{!! $description !!}">
 
     <title>{{ $title }}</title>
     
@@ -75,7 +75,7 @@
                 
                 <div class="col-sm-6">
                     <div class="shopping-item">
-                        <a href="cart.html">В корзине - <span class="cart-amunt">$100</span> <i class="fa fa-shopping-cart"></i> <span class="product-count">5</span></a>
+                        <a href="{{ asset('korzina-tovarov') }}">В корзине - <span style="display: inline-block;" class="hPe">пусто</span> <span style="display: none;" class="hPb"><span id="totalPrice">0</span> руб.</span><i class="fa fa-shopping-cart"></i> <span class="product-count" id="totalGoods">0</span></a>
                     </div>
                 </div>
             </div>
@@ -192,6 +192,10 @@
 
     <!-- Bootstrap JS form CDN -->
     <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+
+    <!-- Скрипты для корзины товаров  -->
+    <script src="{{ asset('js/jquery.cookie.js') }}"></script>
+    <script src="{{ asset('js/cart.js') }}"></script>
 
 @section('scripts')
 @show

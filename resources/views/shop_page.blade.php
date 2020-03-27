@@ -2,11 +2,14 @@
 
 @section('content')
 
-    @include ('includes.product_menu')
+@include ('includes.url_line')
 
     <article>
     	<div class="container">
     		<div class="text-area">
+
+                @include ('includes.product_menu')
+
     			<h1>Интернет-магазин Дисколэнд</h1>
     			<p>Здравствуйте дорогие друзья!</p>
     			<p>Рад приветствовать вас на моем сайте. Меня зовут Александр.</p>

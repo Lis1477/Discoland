@@ -409,6 +409,13 @@ body { font-family:Arial, Helvetica, sans-serif; }
   width: 100%;
   overflow: hidden;
 }
+.product-hover a.add-to-cart-link {
+  top: -25%;
+  background-color: green;
+}
+.product-hover a.view-details-link {
+  bottom: -25%;
+}
 .product-hover:after {
   background: none repeat scroll 0 0 #000;
   content: "";
@@ -447,8 +454,6 @@ body { font-family:Arial, Helvetica, sans-serif; }
 .product-hover a i.fa {
   margin-right: 5px;
 }
-.product-hover a.add-to-cart-link {top: -25%;}
-.product-hover a.view-details-link { bottom: -25%;}
 .single-product h2 {
   font-size: 18px;
   line-height: 25px;

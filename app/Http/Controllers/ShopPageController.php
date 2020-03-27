@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\Category;
 
 class ShopPageController extends Controller
 {
@@ -21,9 +22,12 @@ class ShopPageController extends Controller
 			->limit(10)
 			->get();
 
+		$cat = Category::where('parent_id', '!=', 0)->get(['id', 'slug']);
+
 		$title = "Интернет магазин DISCOLAND.BY";
 		$description = "Продаем новые виниловые пластинки, фирменные CD, средства ухода, хранения, упаковка.";
+		$cat_slug = "";
 
-		return view('shop_page', compact('new_vinyl', 'new_cd', 'title', 'description'));
+		return view('shop_page', compact('new_vinyl', 'new_cd', 'title', 'description', 'cat_slug', 'cat'));
 	}
 }
