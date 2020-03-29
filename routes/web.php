@@ -12,7 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::post('rezultaty-poiska', 'SearchResultController@postIndex');
 
+Route::post('ajax/datalist', 'Ajax\DatalistController@postIndex');
 
 Route::prefix('korzina-tovarov')->group(function(){
 	Route::get('/', 'CartController@getIndex');

@@ -6,20 +6,26 @@
     	<div class="container">
     		<div class="text-area">
                 @include ('includes.product_menu')
-                <div class='product-page_category-ico'>
-                    <img src="{{ asset('img/site_img/'.$cat->picture) }}" alt="{{ $cat->name }}">
+    			<div>
+                    <h1>Результат поиска по запросу <strong>&laquo{{ $search_string }}&raquo</strong></h1>
+
+                    @if(!isset($products))
+                    <p><strong>{{ $txt }}</strong></p>
+                    @endif
+
                 </div>
-    			{!! $cat->text !!}
                 <p style="clear: both;"></p>
     		</div>
     	</div>
     </article>
 
+    @if(isset($products))
 	<section>
         <div class="container">
             <div class="text-area">
 
                 <div class="product-page_show-product-block">
+
                 @foreach ($products as $item)
                     @foreach ($view_cat as $one)
                         @foreach($one->categories()->get() as $two)
@@ -46,10 +52,7 @@
             </div>
         </div>
     </section>
-
-
-
-
+    @endif
 
 
 @endsection

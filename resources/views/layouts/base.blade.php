@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{!! $description !!}">
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <title>{{ $title }}</title>
     
     <!-- Bootstrap -->
@@ -19,7 +21,6 @@
 @section('styles')
 @show
     <link href="{{ asset('favicon.ico') }}" rel="shortcut icon" type="/image/x-icon">
-
 
     <script src="{{ asset('js/jquery.min.js') }}"></script>
 
@@ -84,26 +85,41 @@
     
     <div class="mainmenu-area">
         <div class="container">
-            <div class="row">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                </div> 
-                <div class="navbar-collapse collapse">
-                    <nav>
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="{{ asset('') }}">Главная</a></li>
-                            <li><a href="{{ asset('katalog') }}">Каталог</a></li>
-                            <li><a href="#">Доставка и оплата</a></li>
-                            <li><a href="#">Блог</a></li>
-                            <li><a href="#">Контакты</a></li>
-                        </ul>
-                    </nav>
-                </div>  
+            <div class="navigation-line">
+                <div class="row">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div> 
+                    <div class="navbar-collapse collapse">
+                        <nav>
+                            <ul class="nav navbar-nav">
+                                <li class="active"><a href="{{ asset('') }}">Главная</a></li>
+                                <li><a href="{{ asset('katalog') }}">Каталог</a></li>
+                                <li><a href="#">Доставка и оплата</a></li>
+                                <li><a href="#">Блог</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </nav>
+                    </div>  
+                </div>
+
+                <div class="search-bar">
+                    <form method="post" action="{{ asset('rezultaty-poiska') }}">
+                        {!! csrf_field() !!}
+                        <datalist id="mydata">
+                            
+                        </datalist>
+                        <div class="search-bar-view">
+                        <input type="search" name="search_string" id="data-products" list="mydata" placeholder="Поиск товаров">
+                        <button type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div> <!-- End mainmenu area -->
@@ -196,6 +212,10 @@
     <!-- Скрипты для корзины товаров  -->
     <script src="{{ asset('js/jquery.cookie.js') }}"></script>
     <script src="{{ asset('js/cart.js') }}"></script>
+
+    <!-- Поиск товаров  -->
+    <script src="{{asset('js/search.js')}}"></script>
+
 
 @section('scripts')
 @show

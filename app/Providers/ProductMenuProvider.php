@@ -24,6 +24,11 @@ class ProductMenuProvider extends ServiceProvider
      */
     public function boot()
     {
-        View::composer(['includes.product_menu', 'product_page', 'shop_page'], 'App\Http\ViewComposers\ProductMenuComposer');
+        View::composer([
+            'includes.product_menu', 
+            'product_page', 
+            'shop_page', 
+            'search_result'
+        ], 'App\Http\ViewComposers\ProductMenuComposer');
     }
 }

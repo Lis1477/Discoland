@@ -55,6 +55,31 @@ strong {
 .dropdown-menu>li>a {
 	color: rgba(255, 255, 255, .7);
 }
+.navigation-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.search-bar-view {
+    display: flex;
+}
+.search-bar input[type="search"] {
+    width: 250px;
+    height: 29px;
+    box-shadow: none;
+    outline: none;
+    border: solid 1px #E31E24;
+    padding: 7px 5px;
+    text-transform: uppercase;
+}
+.search-bar button {
+    margin-left: 5px;
+    font-size: 13px;
+    padding: 8px;
+    border-radius: 50%;
+    background-color: #E31E24;
+    color: #fff;
+}
 
 .main-page-slider {
 	background-color: #ffffff;
